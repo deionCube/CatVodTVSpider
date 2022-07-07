@@ -33,8 +33,8 @@ import java.util.regex.Pattern;
  * Author: 小黄瓜
  */
 public class N0ys extends Spider {
-    private static final String siteUrl = "http://1090ys8.com";
-    private static final String siteHost = "1090ys8.com";
+    private static final String siteUrl = "https://1090hd.com";
+    private static final String siteHost = "1090hd.com";
     private static final String ua = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.54 Safari/537.36";
 
     /**
@@ -349,7 +349,7 @@ public class N0ys extends Spider {
     public String playerContent(String flag, String id, List<String> vipFlags) {
         try {
             // 播放页 url
-            String url = "http://1090ys8.com/play/" + id + ".html";
+            String url = "https://1090hd.com/play/" + id + ".html";
             Document doc = Jsoup.parse(OkHttpUtil.string(url, getHeaders(url)));
             Elements allScript = doc.select("script");
             JSONObject result = new JSONObject();

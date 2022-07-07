@@ -21,6 +21,8 @@
 
 ### 代码包食用方式
 ----
+**2.1.1Beta5版本已弃用custom_spider.jar的读取，本地请配合clan://协议测试**
+
 本地加载：将`custom_spider.jar`放入设备sd卡根目录即可。 **注意，如需本地加载，请手动赋予App存储空间读写权限，App默认不申请存储空间读写权限**
 
 远程加载：将`custom_spider.jar`上传到你的网络空间，获取对应的文件下载地址，在软件自定义配置的json文件中加入下面格式的键值对。
@@ -100,6 +102,25 @@
 
 直播配置重定向代理，示例参考[TxtSubscribe](/app/src/main/java/com/github/catvod/live/TxtSubscribe.java)
 
+---
+
+**推送功能扩展（需v2.1.0.Beta6及以上版本）**
+
+入口 [PushAgent](/app/src/main/java/com/github/catvod/spider/PushAgent.java)
+
+需要在配置文件中，加入key为`push_agent`的站点，数据返回格式和普通爬虫一致
+
+```json
+{
+  "key": "push_agent",
+  "name": "推送",
+  "type": 3,
+  "api": "csp_PushAgent",
+  "searchable": 0,
+  "quickSearch": 0,
+  "filterable": 0
+}
+```
 ---
 
 ## 基础类
