@@ -185,13 +185,13 @@ public class Cokemv extends Spider {
                     if (a == null)
                         continue;
                     String span = doc.select("span.page-current").text();
-                    String wy = doc.select("a.尾页").text();
+                    String name = a.text();
                     if (page == -1) {
                         page = Integer.parseInt(span);
                     } else {
                         page = 0;
                     }
-                    if (wy.equals("尾页")) {
+                    if (name.equals("尾页")) {
                         Matcher matcher = regexPage.matcher(a.attr("href"));
                         if (matcher.find()) {
                             pageCount = Integer.parseInt(matcher.group(1).split("-")[8]);
