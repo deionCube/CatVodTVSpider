@@ -180,8 +180,8 @@ public class Cokemv extends Spider {
                 pageCount = page;
             } else {
                 for (int i = 0; i < pageInfo.size(); i++) {
-                    Element li = pageInfo.get(i);
-                    Element a = li.selectFirst("a");
+                    Element a = pageInfo.get(i);
+                    Element a = a.selectFirst("a");
                     if (a == null)
                         continue;
                     String span = doc.select("span.page-current").text();
